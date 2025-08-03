@@ -62,7 +62,7 @@ See [`SQL_queries.sql`](https://github.com/Iyeose/Sales-Performance-Dashboard/bl
 
 ##  Tableau Dashboard Screenshot
 
-![Superstore Dashboard](images/Superstore%20Sales%20Performance.jpg)
+![Superstore Dashboard](https://github.com/Iyeose/Sales-Performance-Dashboard/blob/main/Superstore%20Sales%20Performance.jpg)
 
 > _You can download or view the full resolution image [here](https://public.tableau.com/views/SuperstoreSalesPerformance_17541649793780/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
