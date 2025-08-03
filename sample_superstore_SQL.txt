@@ -1,0 +1,86 @@
+SELECT *
+FROM sample_superstore
+;
+
+-- Basic Overview
+SELECT COUNT(*) AS total_orders,
+	   COUNT(DISTINCT "Order_ID") AS total_customers,
+	   SUM(Profit) AS total_profit
+FROM sample_superstore
+;
+
+-- Monthly Sales Trend
+SELECT strftime('%Y-%m', date("Order_Date")) AS month,
+	   ROUND(SUM(Sales),2) AS monthly_sales,
+	   ROUND(Sum(Profit),2) AS monthly_profit
+FROM sample_superstore
+WHERE "Order_Date" IS NOT NULL
+GROUP BY Order_month
+ORDER BY Order_month;
+
+-- Sales by Region 
+SELECT Region,
+	   ROUND(SUM(Sales),2) AS total_Sales,
+	   ROUND(SUM(profit),2) AS total_profit
+FROM sample_superstore
+GROUP BY Region
+ORDER BY total_sales DESC;
+
+-- Top 10 Products by Profit
+SELECT "Product_Name",
+       ROUND(SUM(Sales), 2) AS total_sales,
+       ROUND(SUM(Profit), 2) AS total_profit
+FROM sample_superstore
+GROUP BY "Product_Name"
+ORDER BY total_profit DESC
+LIMIT 10;
+
+-- Top 10 Products by Sales
+SELECT "Product_Name",
+       ROUND(SUM(Sales), 2) AS total_sales,
+       ROUND(SUM(Profit), 2) AS total_profit
+FROM sample_superstore
+GROUP BY "Product_Name"
+ORDER BY total_sales DESC
+LIMIT 10;
+
+-- Top 10 CUstomers by Sales
+SELECT "Customer_Name",
+       ROUND(SUM(Profit), 2) AS total_profit,
+       ROUND(SUM(Sales), 2) AS total_sales
+FROM sample_superstore
+GROUP BY "Customer_Name"
+ORDER BY total_sales DESC
+LIMIT 10;
+
+-- Top 10 CUstomers by Profit
+SELECT "Customer_Name",
+       ROUND(SUM(Profit), 2) AS total_profit,
+       ROUND(SUM(Sales), 2) AS total_sales
+FROM sample_superstore
+GROUP BY "Customer_Name"
+ORDER BY total_profit DESC
+LIMIT 10;
+
+-- Profit Margin by Category
+SELECT Category,
+       ROUND(SUM(Profit)/NULLIF(SUM(Sales), 0), 2) AS profit_margin
+FROM sample_superstore
+GROUP BY Category
+ORDER BY profit_margin DESC;
+
+-- Category and Sub-Category Breakdown
+SELECT Category,
+       "Sub_Category",
+       ROUND(SUM(Sales), 2) AS total_sales,
+       ROUND(SUM(Profit), 2) AS total_profit
+FROM sample_superstore
+GROUP BY Category, "Sub-Category"
+ORDER BY Category, total_sales DESC;
+
+-- Quantity Sold per Region
+SELECT Region,
+       SUM(Quantity) AS total_quantity
+FROM sample_superstore
+GROUP BY Region
+ORDER BY total_quantity DESC;
