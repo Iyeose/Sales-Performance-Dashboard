@@ -46,7 +46,7 @@ Key queries:
 - Top 10 best-selling products
 - Profit margin by product category
 
-See [`SQL_queries.sql`](./SQL_queries.sql) for full list of SQL commands.
+See [`SQL_queries.sql`](./SQL_queries.sql](https://github.com/Iyeose/Sales-Performance-Dashboard/blob/main/sample_superstore_SQL.txt)) for full list of SQL commands.
 
 ### 3. Dashboard Overview
 
