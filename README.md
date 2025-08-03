@@ -64,7 +64,7 @@ See [`SQL_queries.sql`](./SQL_queries.sql) for full list of SQL commands.
 
 ![Superstore Dashboard](images/Superstore%20Sales%20Performance.jpg)
 
-> _You can download or view the full resolution image [here]([images/Superstore%20Sales%20Performance.jpg](https://public.tableau.com/views/SuperstoreSalesPerformance_17541649793780/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link))_
+> _You can download or view the full resolution image [here]([[images/Superstore%20Sales%20Performance.jpg](https://public.tableau.com/views/SuperstoreSalesPerformance_17541649793780/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)])_
 
 ---
 
